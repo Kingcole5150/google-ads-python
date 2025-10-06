@@ -22,9 +22,8 @@ RUN apt-get update -qy && \
         python3.10 \
         python3.11 \
         python3.12 \
-        python3.13 && \
-        # python3.13 \
-        # python3.14 && \
+        python3.13 \
+        python3.14 && \
     curl -fsSo /tmp/get-pip.py https://bootstrap.pypa.io/pip/3.8/get-pip.py && \
     python3.8 /tmp/get-pip.py && \
     python3.8 -m pip install --no-cache-dir --upgrade pip && \
@@ -38,8 +37,8 @@ RUN apt-get update -qy && \
     python3.12 -m pip install --no-cache-dir --upgrade pip && \
     python3.13 /tmp/get-pip.py && \
     python3.13 -m pip install --no-cache-dir --upgrade pip && \
-    # python3.14 /tmp/get-pip.py && \
-    # python3.14 -m pip install --no-cache-dir --upgrade pip && \
+    python3.14 /tmp/get-pip.py && \
+    python3.14 -m pip install --no-cache-dir --upgrade pip && \
     rm /tmp/get-pip.py && \
     python3 -m pip install --no-cache-dir "nox>=2020.12.31,<2022.6" && \
     rm -rf /var/cache/apt/lists
